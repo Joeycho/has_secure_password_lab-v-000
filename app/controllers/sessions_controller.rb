@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def create
-    binding.pry
     user = User.find_by(name: user_params[:name])
    authenticated = user.try(:authenticate, params[:password])
    return head(:forbidden) unless authenticated
