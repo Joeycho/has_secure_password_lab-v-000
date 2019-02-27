@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def create
-   session[:user_id] = User.create(user_params)
+   @user = User.create(user_params)
+   session[:user_id] = @user.id
   end
 
  private
