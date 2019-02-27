@@ -5,6 +5,7 @@ class UsersController < ApplicationController
      session[:user_id] = @user.id
     else
       redirect_to :new
+    end
   end
 
  private
